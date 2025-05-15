@@ -39,7 +39,7 @@ export default async function RootLayout({
     <ClerkProvider localization={clerkLocalization} appearance={{ baseTheme: dark }}>
       <html lang={locale} suppressHydrationWarning>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-muted`}
         >
           <ThemeProvider
             attribute="class"

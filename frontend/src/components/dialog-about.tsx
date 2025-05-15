@@ -10,9 +10,11 @@ import {
 import { Button } from "./ui/button";
 import { Coffee } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function DialogAbout() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const t = useTranslations();
 
   return (
     <Dialog>
@@ -23,12 +25,12 @@ export default function DialogAbout() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Sobre este desafio técnico</DialogTitle>
+          <DialogTitle>{t("about.title")}</DialogTitle>
           <DialogDescription>Chat Toolzz</DialogDescription>
         </DialogHeader>
         <div className="mt-2 space-y-2 text-sm leading-relaxed text-foreground">
           <p>
-            <span className="font-semibold">Desenvolvido por:</span> Diego de
+            <span className="font-semibold">{t("about.dev")}:</span> Diego de
             Andrade
           </p>
           <p>
@@ -41,7 +43,7 @@ export default function DialogAbout() {
             </a>
           </p>
           <p>
-            <span className="font-semibold">Data:</span> 15/05/2025
+            <span className="font-semibold">{t("about.date")}:</span> 15/05/2025
           </p>
         </div>
         <DialogFooter>

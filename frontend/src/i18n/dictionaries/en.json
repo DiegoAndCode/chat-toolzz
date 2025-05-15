@@ -1,13 +1,22 @@
 {
-    "error_loading_historic": "Unable to load message history...",
-    "label_is_typing": "is typing...",
-    "label_your_user": "Your user",
-    "label_login_message": "Log in to start chatting",
-    "label_you": "You",
-    "label_search_no_results": "No results found",
-    "input_placeholder": "Type your message here...",
-    "input_search_placeholder": "Search messages...",
-    "button_signin": "Sign in",
-    "button_send": "Send",
-    "button_search": "Search"
+    "chat": {
+        "error_loading_historic": "Unable to load message history...",
+        "label_login_message": "Log in to start chatting",
+        "label_is_typing": "is typing...",
+        "label_you": "You",
+        "input_placeholder": "Type your message here...",
+        "button_signin": "Sign in",
+        "button_send": "Send"
+    },
+    "search": {
+        "title": "Search messages",
+        "placeholder": "Search messages...",
+        "button": "Search",
+        "no_results": "No results found"
+    },
+    "about" : {
+        "title": "About this technical challenge",
+        "dev": "Developed by",
+        "date": "Date"
+    }
 }

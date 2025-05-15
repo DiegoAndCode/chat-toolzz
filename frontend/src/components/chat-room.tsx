@@ -188,7 +188,7 @@ export default function ChatRoom({
 
   return (
     <>
-      <Card className="flex-1 overflow-hidden not-dark:bg-muted">
+      <Card className="flex-1 overflow-hidden">
         <CardContent className="p-4 h-full flex flex-col">
           <ScrollArea 
             className="flex-1 pr-2 overflow-auto h-full"
@@ -207,7 +207,7 @@ export default function ChatRoom({
             >
               {isLoaded && !isSignedIn && (
                 <li className="text-center text-muted-foreground py-4">
-                  {t('label_login_message')}
+                  {t('chat.label_login_message')}
                 </li>
               )}
               {!isLoaded && (
@@ -228,7 +228,7 @@ export default function ChatRoom({
                       }`}
                   >
                     <div className="text-sm font-bold text-muted-foreground mt-1">
-                      {isMe ? t('label_you') : msg.userName}
+                      {isMe ? t('chat.label_you') : msg.userName}
                     </div>
                     <div className="flex items-baseline-last gap-2">
                       <span>{msg.content}</span>
@@ -252,7 +252,7 @@ export default function ChatRoom({
           className="text-sm italic text-muted-foreground mt-1"
         >
           {typingUsers.filter(name => name !== user?.firstName).join(', ')}{' '}
-          {typingUsers.filter(name => name !== user?.firstName).length > 0 && t('label_is_typing')}
+          {typingUsers.filter(name => name !== user?.firstName).length > 0 && t('chat.label_is_typing')}
         </div>
       )}
 
@@ -264,13 +264,13 @@ export default function ChatRoom({
         className="mt-4 flex gap-2"
       >
         <label htmlFor="chat-input" className="sr-only">
-          {t('input_placeholder')}
+          {t('chat.input_placeholder')}
         </label>
         <Input
           id="chat-input"
           className="flex-1"
-          aria-label={t('input_placeholder')}
-          placeholder={t('input_placeholder')}
+          aria-label={t('chat.input_placeholder')}
+          placeholder={t('chat.input_placeholder')}
           value={input}
           onChange={e => handleInputChange(e.target.value)}
           autoComplete='off'
@@ -279,10 +279,10 @@ export default function ChatRoom({
         <Button
           type="submit"
           className="cursor-pointer"
-          aria-label={t('button_send')}
+          aria-label={t('chat.button_send')}
           disabled={!isSignedIn || !isLoaded || !input.trim()}
         >
-          {t('button_send')}
+          {t('chat.button_send')}
         </Button>
       </form>
     </>

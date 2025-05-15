@@ -34,7 +34,7 @@ export default function SheetSearch() {
       setMessages(result);
 
       if (result.length === 0) {
-        setError(t('label_search_no_results'));
+        setError(t('search.no_results'));
       }
     } catch (err) {
       console.error(err);
@@ -57,7 +57,7 @@ export default function SheetSearch() {
           <Search />
         </Button>
       </SheetTrigger>
-      <SheetTitle className="sr-only">Search</SheetTitle>
+      <SheetTitle className="sr-only">{t('search.title')}</SheetTitle>
       <SheetContent side="right" className="flex flex-col">
         <h2 className="px-6 pt-6">Pesquisar Mensagens</h2>
         <div className="px-6 flex flex-col flex-1 overflow-hidden">
@@ -69,21 +69,21 @@ export default function SheetSearch() {
             className="flex mt-4 gap-2"
           >
             <label htmlFor="chat-input" className="sr-only">
-              {t('input_search_placeholder')}
+              {t('search.placeholder')}
             </label>
             <Input
               id="search-input"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="flex-1"
-              aria-label={t('input_search_placeholder')}
-              placeholder={t('input_search_placeholder')}
+              aria-label={t('search.placeholder')}
+              placeholder={t('search.placeholder')}
               autoComplete='off'
             />
             <Button
               type="submit"
               className="cursor-pointer"
-              aria-label={t('button_search')}
+              aria-label={t('search.button')}
               disabled={!query.trim()}
             >
               <Search />
