@@ -1,0 +1,13 @@
+{
+    "error_loading_historic": "Não foi possível carregar o histórico...",
+    "label_login_message": "Faça login para começar a conversar",
+    "label_your_user": "Seu usuário",
+    "label_is_typing": "está digitando...",
+    "label_you": "Você",
+    "label_search_no_results": "Nenhum resultado encontrado",
+    "input_placeholder": "Digite aqui sua mensagem...",
+    "input_search_placeholder": "Pesquise por mensagens...",
+    "button_signin": "Entrar",
+    "button_send": "Enviar",
+    "button_search": "Pesquisar"
+}
